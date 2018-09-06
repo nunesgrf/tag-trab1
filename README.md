@@ -1,6 +1,12 @@
 # Trabalho da disciplina Teoria e Aplicação de Grafos 2018/2 
 
-Departamento de Ciência da Computação¹ - Universidade de Brasília (UnB)
 
-Gabriel Nunes     - 16/0006597¹
-Matheus Rodrigues - 15/0141661¹
+    Universidade de Brasília
+    Instituto de Ciências Exatas
+    Departamento de Ciência da Computação¹
+
+    Teoria e Aplicação de Grafos 2018/2
+
+    Gabriel Nunes Rodrigues Fonseca - 16/0006597¹
+    Matheus Rodrigues Guimarães     - 15/0141661¹
+

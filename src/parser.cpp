@@ -1,3 +1,14 @@
+/*
+    Universidade de Brasília
+    Instituto de Ciências Exatas
+    Departamento de Ciência da Computação¹
+
+    Teoria e Aplicação de Grafos 2018/2
+
+    Gabriel Nunes Rodrigues Fonseca - 16/0006597¹
+    Matheus Rodrigues Guimarães     - 15/0141661¹
+*/
+
 #ifndef PARSER_H
 #define PARSER_H
 #endif
@@ -38,10 +49,12 @@ vector< vector<int> > parse(string arquivo) {
         while (getline(fp,line)) {
 		    if(line.find("id") != string::npos) push_vet(&adjacencyList);
             else if(line.find("source") != string::npos) source = catchInt(line) - 1;
-            else if(line.find("target") != string::npos) adjacencyList[source].push_back(catchInt(line)-1);         
+            else if(line.find("target") != string::npos) {
+                adjacencyList[source].push_back(catchInt(line)-1);     
+                adjacencyList[catchInt(line)-1].push_back(source);
+            }
         }
         fp.close();
     }
-
     return adjacencyList;
 }
