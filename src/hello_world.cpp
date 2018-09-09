@@ -16,6 +16,15 @@
 
 using namespace std;
 
+void cabecalho() {
+    cout << endl;
+    cout << "Gabriel Nunes Rodrigues Fonseca - 16/0006597" << endl;
+    cout << "Matheus Rodrigues Guimarães     - 15/0141661" << endl;
+    cout << endl;
+    cout << "VERIFIQUE A PASTA OUTPUT PARA VISUALIZAR OS RESULTADOS" << endl;
+    cout << endl;
+
+}
 int main() {
 
     string arquivo = "../gml/karate.gml";         // Arquivo sobre o qual o algoritmo irá trabalhar. 
@@ -28,4 +37,5 @@ int main() {
 
     degrees(graph); // Cria o arquivo degrees.txt com o grau de cada vértice. Retorna o número de vértices do grafo.
     imprimir(max,"cliques"); // Cria um .txt com o nome do segundo parâmetro com os valores da tabela passada no primeiro parâmetro.
+    cabecalho();
 }
