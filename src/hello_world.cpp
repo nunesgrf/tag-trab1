@@ -9,12 +9,11 @@
     Matheus Rodrigues Guimarães     - 15/0141661¹
 */
 
-#include <vector>
-#include <iostream>
+#include <bits/stdc++.h>
 #include "parser.cpp"
 #include "aux.cpp"
-#include <bits/stdc++.h>
 #include "BronKerbosch.cpp"
+
 using namespace std;
 
 int main() {

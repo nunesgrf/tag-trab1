@@ -11,7 +11,6 @@
 
 #ifndef AUX_H
 #define AUX_H
-#endif
 
 #include <vector>
 #include <iostream>
@@ -46,3 +45,5 @@ void imprimir(vector< vector<int> >  vet, string word) {
     }
     fp << endl;       
 }
+
+#endif
