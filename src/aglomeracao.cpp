@@ -68,9 +68,9 @@ int mediaCoeficienteAglomeracao(vector< vector<int> > graph, double somaCoeficie
     ofstream fp;
 
     fp.open("../output/coeficiente_medio.txt"); 
-    fp << "COEFICIENTE MÉDIA DE AGLOMERAÇÃO DO GRAFO: " << 1/(graph.size()*somaCoeficientes) << endl;   
+    fp << "COEFICIENTE MÉDIA DE AGLOMERAÇÃO DO GRAFO: " << somaCoeficientes/graph.size() << endl;   
     fp.close();
-    return 1/(graph.size()*somaCoeficientes);
+    return somaCoeficientes/graph.size();
 }
 
 #endif
