@@ -10,9 +10,11 @@
 */
 
 #include <bits/stdc++.h>
+
 #include "parser.cpp"
 #include "aux.cpp"
 #include "BronKerbosch.cpp"
+#include "aglomeracao.cpp"
 
 using namespace std;
 
@@ -36,6 +38,9 @@ int main() {
     bronkerboschAlgorithm(&max,graph,r,p,x);               // O resultado obtido está armazenado em @param max.
 
     degrees(graph); // Cria o arquivo degrees.txt com o grau de cada vértice. Retorna o número de vértices do grafo.
-    imprimir(max,"cliques"); // Cria um .txt com o nome do segundo parâmetro com os valores da tabela passada no primeiro parâmetro.
+    imprimir(graph,"../output/lista_adjacencia.txt","LISTA DE ADJACENCIA:"); // Imprime um .txt com a lista de adjacência do grafo.
+    imprimir(max,"../output/cliques_maximais.txt","CLIQUES_MAXIMAIS:"); // Imprime um .txt com os cliques maximais do grafo.
+    mediaCoeficienteAglomeracao(graph,coeficienteAglomeracao(graph)); // Imprime 2 .txt -- 1 com o coeficiente de aglomeração de cada nó e o outro com o coeficiente médio do grafo.
+
     cabecalho();
 }

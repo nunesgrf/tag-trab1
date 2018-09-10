@@ -24,24 +24,28 @@ int degrees(vector< vector<int> > graph) {
     int sum = 0;
     
     fp.open("../output/degrees.txt");
+    fp << "GRAU DOS VÉRTICES:" << endl;
     for(int i = 0; i < graph.size() ; i++) {
         sum += graph[i].size();
-        fp << "Vértice " << i+1 <<": " << graph[i].size() << " grau(s)" << endl;
+        fp << setw(2) << setfill('0') << i+1 <<": " << setw(2) << setfill('0') << graph[i].size() << " grau(s)" << endl;
     }  
     return sum/2;
 }
 
-void imprimir(vector< vector<int> >  vet, string word) {
+void imprimir(vector< vector<int> >  vet, string local, string header) {
     ofstream fp;
 
-    fp.open("../output/" + word + ".txt");
-
+    fp.open(local);
+    
+    fp << header << endl;
+    fp << "( Nº | TAMANHO | VÉRTICES )" << endl;
     for ( std::vector<std::vector<int>>::size_type i = 0; i < vet.size(); i++ ) {
-        fp << endl << word << " " << i + 1 << ": " << endl;
+        fp << setw(2) << setfill('0') << i + 1 << " (" << setw(2) << setfill('0') << vet[i].size() << ")" << " -> {";
         for ( std::vector<int>::size_type j = 0; j < vet[i].size(); j++ ) {
-            fp << vet[i][j]+1 << ' ';             
+            fp << setw(2) << setfill('0') << vet[i][j]+1;
+            if(j+1 != vet[i].size()) fp << ", ";             
         }
-        fp << endl;
+        fp << "}" << endl;
     }
     fp << endl;       
 }

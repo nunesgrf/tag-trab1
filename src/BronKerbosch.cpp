@@ -11,7 +11,6 @@
 
 #ifndef BRONKERBOSCH_H
 #define BRONKERBOSCH_H
-#endif
 
 #include <vector>
 #include <bits/stdc++.h>
@@ -48,3 +47,5 @@ void bronkerboschAlgorithm(vector< vector<int> > * max, vector<vector< int> > gr
     }
 
 }
+
+#endif
