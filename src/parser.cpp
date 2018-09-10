@@ -11,7 +11,6 @@
 
 #ifndef PARSER_H
 #define PARSER_H
-#endif
 
 #include <vector>
 #include <fstream>
@@ -58,3 +57,5 @@ vector< vector<int> > parse(string arquivo) {
     }
     return adjacencyList;
 }
+
+#endif
